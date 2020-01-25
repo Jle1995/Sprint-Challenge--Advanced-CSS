@@ -1,16 +1,21 @@
 // Mixins Here
 
-.header-mixin {
-    .name();
-	.navbars();
-	}
+.my-first-mixin(@btn-justify, @btn-align)
+{
+    justify-content: @btn-justify;
+    align-items: @btn-align;
+    .walk .btn();
+}	
 	
-.space-images-mixin {
-    .space-images();
-	.img();
-	}
-	
-	
-	
-	
-	
+.my-first-mixin(space-evenly, center);
+    
+.my-second-mixin(@btn-font-family, @btn-bg-color,)
+{
+    font-family: @btn-font-family;
+    font-weight: @btn-font-weight;
+    background-color: @btn-bg-color;
+    .walk .btn();
+}
+
+.my-second-mixin(Ubuntu, Regular);
+
